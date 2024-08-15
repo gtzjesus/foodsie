@@ -4,6 +4,11 @@ import MealsGrid from '@/components/meals/meals-grid';
 import { getMeals } from '@/lib/meals';
 import { Suspense } from 'react';
 
+export const metadata = {
+  title: 'All Meals',
+  description: 'Browse these incredible products.',
+};
+
 async function Meals() {
   // Reach out directly to database since we are in a server component
   const meals = await getMeals();
